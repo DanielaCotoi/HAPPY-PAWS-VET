@@ -63,12 +63,17 @@ Aplicația utilizează Firebase Authentication, care permite autentificarea util
 Accesul la date este controlat prin identificatorul utilizatorului (userId), astfel încât fiecare utilizator să își poată accesa doar propriile programări.
 
 5. Capturi ecran aplicație 
-🔐 Autentificare
- 
+## 🔐 Autentificare
+![Autentificare](Autentificare_aplicatie.png)
 
-🏠 Dashboard
- 
-➕ Programări
+## 🏠 Dashboard
+![Dashboard](Dashboard-ecran_principal.png)
+
+## ➕ Programări
+![Programari](Ecran_adaugare_editare_stergere_programare.png)
+
+## 📍 Locație clinică
+![Harta](Ecran_locatie_cabinet_veterinar.png)
  
 📍 Locație clinică
  
