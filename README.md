@@ -1,21 +1,84 @@
-<<<<<<< HEAD
-# React + Vite
+🌐 Aplicație live
+🔗 https://happy-paws-vet.vercel.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📦 Repository GitHub:
+🔗 https://github.com/DanielaCotoi/HAPPY-PAWS-VET
 
-Currently, two official plugins are available:
+Link you-YouTube: https://youtu.be/dBFv8MNzbAQ
+1. Introducere
+Aplicația Happy Paws Vet reprezintă o soluție web modernă pentru gestionarea programărilor într-o clinică veterinară. Aceasta permite utilizatorilor să interacționeze rapid și eficient cu serviciile clinicii, utilizând tehnologii cloud pentru stocarea datelor și automatizarea proceselor.
+Aplicația este construită folosind o arhitectură bazată pe servicii cloud, ceea ce oferă scalabilitate, accesibilitate și ușurință în utilizare.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+2. Descriere problemă
+În cadrul clinicilor veterinare, gestionarea programărilor este adesea realizată manual sau prin sisteme neautomatizate, ceea ce poate duce la suprapuneri, erori sau dificultăți în comunicarea cu pacienții.
+Problema abordată de această aplicație este digitalizarea și automatizarea procesului de programare, oferind o soluție eficientă care permite utilizatorilor să își gestioneze programările online, într-un mod sigur și organizat.
 
-## React Compiler
+3. Descriere API
+Aplicația utilizează servicii cloud care oferă API-uri REST pentru interacțiunea cu backend-ul:
+Firebase Authentication API – pentru autentificarea utilizatorilor (login/register)
+Cloud Firestore API – pentru stocarea și gestionarea datelor (programări)
+EmailJS API – pentru trimiterea emailurilor de confirmare
+Google Maps API – pentru afișarea locației clinicii
+Aceste API-uri sunt integrate în aplicație prin metode specifice furnizate de fiecare serviciu.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+4. Flux de date
+🔄 Exemple de request / response
+➤ Adăugare programare (Firestore)
+Request:
+{
+  "userId": "12345",
+  "petName": "Ares",
+  "date": "2026-07-05",
+  "time": "10:00",
+  "problem": "Picior rupt"
+}
+Response:
+{
+  "id": "abc123",
+  "status": "success"
+}
 
-## Expanding the ESLint configuration
+➤ Trimitere email (EmailJS)
+Request:
+{
+  "to_email": "user@gmail.com",
+  "petName": "Ares",
+  "date": "2026-07-05",
+  "problem": "Picior rupt"
+}
+Response:
+{
+  "status": 200,
+  "text": "OK"
+}
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# HAPPY-PAWS-VET
-WEB PROJECT
->>>>>>> 097c5b7d3c4d836cb2f0e27ee236dc8d66a395f3
+🌐 Metode HTTP utilizate
+POST → adăugare programare
+GET → preluare programări
+DELETE → ștergere programare
+PUT / UPDATE → editare programare
+
+🔐 Autentificare și autorizare
+Aplicația utilizează Firebase Authentication, care permite autentificarea utilizatorilor prin email și parolă.
+Accesul la date este controlat prin identificatorul utilizatorului (userId), astfel încât fiecare utilizator să își poată accesa doar propriile programări.
+
+5. Capturi ecran aplicație 
+🔐 Autentificare
+ 
+
+🏠 Dashboard
+ 
+➕ Programări
+ 
+📍 Locație clinică
+ 
+6. Referințe
+https://firebase.google.com/docs
+https://www.emailjs.com/docs/
+https://developers.google.com/maps
+https://vercel.com/docs
+https://react.dev
+
+✅ Concluzie
+Aplicația Happy Paws Vet oferă o soluție modernă și eficientă pentru gestionarea programărilor într-o clinică veterinară, utilizând servicii cloud pentru stocare, autentificare și comunicare.
+Integrarea mai multor API-uri externe demonstrează capacitatea aplicației de a funcționa într-un ecosistem distribuit și scalabil.
